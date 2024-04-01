@@ -36,7 +36,7 @@ public class Main {
     public static int findPivot(int[] A, int start, int end) {
         if (start+1==end) {
             if (A[start]>A[end]) swap(A, start, end);
-            return end;
+            return start;
         }
 
         int middle = (start+end)/2;
