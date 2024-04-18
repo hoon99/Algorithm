@@ -3,11 +3,11 @@ class Solution {
         char[] arr = s.toCharArray();
         
         for(int i=0; i<arr.length; i++) {
-            if(arr[i] == 32) continue;
-            if(arr[i] >= 97) {
-                arr[i] = (char) ((arr[i] + n - 97) % 26 + 97);
+            if(arr[i] == ' ') continue;
+            if(arr[i] >= 'a' && arr[i]<='z') {
+                arr[i] = (char) ((arr[i] + n - 'a') % ('z'-'a'+1) + 'a');
             } else {
-                arr[i] = (char) ((arr[i] + n - 65) % 26 + 65);
+                arr[i] = (char) ((arr[i] + n - 'A') % ('Z'-'A'+1) + 'A');
             }
         }
         return String.valueOf(arr);
