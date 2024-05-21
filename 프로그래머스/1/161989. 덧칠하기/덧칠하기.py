@@ -3,9 +3,7 @@ def solution(n, m, section):
     left = section[0]
     
     for i in section[:]:
-        if i < left + m:
-            section.remove(i)
-        else:
+        if i >= left + m:
             left = i
             count += 1
         
